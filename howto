@@ -1,0 +1,22 @@
+A. Configure the *host* to insure that 
+----------------------------------------------------------
+        the folder /__config/pacman/pkg exists on the host.
+        the folder /__config/pacman/pkg is populated.
+        he folder /__config is shared as __config
+
+B. Configure 'Shared Folders' under the *Guest Settings*:
+-----------------------------------------------------------
+	Folder Path: [/__cache]
+        Folder Name: [__cache]
+	[ ] Read-only (unchecked)
+        [*] Automount (checked)
+        Mount Point [/__cache]
+        [*] Make Permanent (checked)
+
+C. Run ./cache.sh 
+----------------------------------------------------------
+(This will mount the host cache on the guest)
+
+D. Run ./vbox.sh
+----------------------------------------------------------
+(This will install vbox guest additions and much more.)
